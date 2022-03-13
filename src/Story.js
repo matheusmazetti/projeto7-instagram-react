@@ -24,16 +24,16 @@ export default function Story(){
         user: 'memeriagourmet',
         img: 'assets/memeriagourmet.svg'
     }];
-    const storiesUser = storyObj.map(user => <div class="usuario">{user.user}</div>);
-    const storiesImg = storyObj.map(user => 
-        <div class="imagem">
-            <img src={user.image} />
-        </div>);
+    const stories = storyObj.map(user => 
+    <div class="story">
+        <div class="imagem"><img src={user.img} /></div>
+        <div class="usuario">{user.user}</div>
+    </div>);
     return(
         <div class="stories">
-            <div class="story">
-              {storiesImg}
-              {storiesUser}
+            {stories}
+            <div class="setinha">
+              <ion-icon name="chevron-forward-circle"></ion-icon>
             </div>
         </div>
     )

@@ -1,13 +1,22 @@
 import ReactDOM from 'react-dom';
+import Body from './Body';
 import Header from './Header';
 import Story from './Story';
-function App(){
+function AppBase(){
     return(
         <div>
             <Header />
-            <Story />
+            <Body />
         </div>
     )
 }
 
-ReactDOM.render(<App />, document.querySelector(".root"));
+ReactDOM.render(<AppBase />, document.querySelector(".root"));
+
+function App(){
+    return(
+        <Story />
+    )
+}
+
+ReactDOM.render(<App />, document.querySelector(".esquerda"));
